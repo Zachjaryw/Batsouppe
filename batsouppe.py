@@ -14,5 +14,5 @@ with st.form('items'):
   c0, c1, c2 = st.columns(3)
   j = 0
   for i in historicalData.STANDEES:
-    exec(f'c{j%3}.checkbox("{i}",key = '{i}')')
+    exec(f'c{j%3}.checkbox("{i}",key = "{i}")')
     
