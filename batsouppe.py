@@ -6,8 +6,8 @@ import streamlit as st
 
 st.title('Batsouppe Inventory')
 
-dbx = initializeToken(st.secrets.file.filepath)
+dbx = initializeToken(st.secrets.access.access)
 
-historicalData = pd.DataFrame(fromDBX(dbx,st.secrets.access.access))
+historicalData = pd.DataFrame(fromDBX(dbx,st.secrets.file.filepath))
 
 st.dataframe(historicalData)
