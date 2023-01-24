@@ -11,10 +11,12 @@ dbx = initializeToken(st.secrets.access.access)
 historicalData = pd.DataFrame(fromDBX(dbx,st.secrets.file.filepath))
 
 with st.form('items'):
+  st.write('Select all items that you will bring to the convention or select ALL if brining all items')
   c0, c1, c2 = st.columns(3)
-  j = 0
+  select0 = c0.checkbox("ALL",key = 'ALL')
+  j = 1
   for i in historicalData.STANDEES:
-    exec(f'c{j%3}.checkbox("{i}",key = "{i}")')
+    exec(f'select{j} = c{j%3}.checkbox("{i}",key = "{i}")')
     j+=1
   button = st.form_submit_button('Submit')
     
