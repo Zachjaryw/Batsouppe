@@ -21,3 +21,11 @@ with st.expander('Select Items to Bring to Convention:'):
       j+=1
     button = st.form_submit_button('Submit')
     
+if button:
+  it select0 == True:
+    st.write('You are bringing all items to this convention')
+   else:
+    st.write('You will be bringing the following items:')
+    for i in range(len(historicalData.STANDEES)):
+      st.write(i)
+      
