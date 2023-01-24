@@ -7,3 +7,9 @@ from Dropbox_Setup import toDBX
 import streamlit as st
 
 st.title('Batsouppe Inventory')
+
+dbx = IT(st.secrets.file.filepath)
+
+historicalData = pd.DataFrame(fromDBX(dbx,st.secrets.access.access))
+
+st.dataframe(historicalData)
