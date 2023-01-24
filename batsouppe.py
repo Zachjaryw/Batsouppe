@@ -27,7 +27,7 @@ if button:
   else:
     st.write('You will be bringing the following items:')
     for i in range(len(historicalData.STANDEES)):
-      exec(f'test = select{i}')
+      exec(f'test = select{i-1}')
       if test == True:
-        st.write(historicalData.STANDEES[i])
+        st.write(historicalData.STANDEES[i-1])
       
