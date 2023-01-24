@@ -24,7 +24,7 @@ with st.expander('Select Items to Bring to Convention:'):
 if button:
   if select0 == True:
     st.write('You are bringing all items to this convention')
-   else:
+  else:
     st.write('You will be bringing the following items:')
     for i in range(len(historicalData.STANDEES)):
       st.write(i)
