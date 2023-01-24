@@ -22,7 +22,7 @@ with st.expander('Select Items to Bring to Convention:'):
     button = st.form_submit_button('Submit')
     
 if button:
-  it select0 == True:
+  if select0 == True:
     st.write('You are bringing all items to this convention')
    else:
     st.write('You will be bringing the following items:')
