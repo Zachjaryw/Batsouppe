@@ -15,4 +15,6 @@ with st.form('items'):
   j = 0
   for i in historicalData.STANDEES:
     exec(f'c{j%3}.checkbox("{i}",key = "{i}")')
+    j+=1
+  button = st.form_submit_button('Submit')
     
